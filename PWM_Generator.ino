@@ -2,17 +2,17 @@
 //This programm based on PWM and called to get min and max pulses values for servo drive by
 //modulation the pulse for min or max value in the loop
 //If you use Arduino IDE use Serial Motor tool (CTRL+SHIFT+M) to review the current values
-//video inscruction how to use:
+//video inscruction how to use: https://www.youtube.com/watch?v=BW06qeqZyxY
 
 int outPin = 10; // Pin number for PWM signals
 int buttonPin = 11; // Pin number for button
 int codeExecuteCorrection = 5; // Delay for code executing
 
 int clockwisePulse = 1; // Can be 0 or 1; clockwise is 1
-int delayHigh = 250;   // The approximate middle position for the servo drive is 90 degrees
+int delayHigh = 1500;   // The approximate middle position for the servo drive is 90 degrees
 int interation = 80;    // Amount of signals per loop
-int sensitivity = 20;   // Value how much pulse will go londer per single iteration
-int tickDelay = 500;    // Value of delay beetwen signals 
+int sensitivity = 20;   // Value how much pulse will become londer/shoter per single iteration
+int tickDelay = 500;    // Value of delay between signals 
 
 void setup()
 {
@@ -70,6 +70,6 @@ int restDelay (int delayHigh)
   int restBig = delayLow / 1000;
   
   delay(restBig);
-  delayMicroseconds(restSmall); 
+  delayMicroseconds(restSmall); // max value for argument is 16383 (microseconds)
 }
 
