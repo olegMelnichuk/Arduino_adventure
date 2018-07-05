@@ -7,6 +7,8 @@ If you use Arduino IDE use Serial Motor tool (CTRL+SHIFT+M) to review the curren
 
 Video inscruction how to use: https://www.youtube.com/watch?v=BW06qeqZyxY
 
+![Scema image](https://github.com/olegMelnichuk/Arduino_adventure/blob/PWM_Generator/Arduino_%D0%9C%D0%9F.png)
+
 #Calibration algorithm
  - define minimum value with PWM_Generator and calculate with formula (min = min*1.45);
  - using min value set the 0 position and calculate value for 180 degree using scale picture and PWM_Generator
